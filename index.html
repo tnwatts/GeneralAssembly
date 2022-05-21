@@ -14,6 +14,9 @@
        html{
            /*height: 5000px;*/
        }
+       .placeholder{
+           height: 2000px;
+       }
 
        /*css style reset*/
        body{
@@ -23,9 +26,18 @@
        .flex-header{
            display: flex;
            background : linear-gradient(to right, #504ab8b6, #166208a5);
-           height: 30%;
+           height: 25%;
+           width: 100%;
            justify-content: center;
-           
+           position: fixed;
+           z-index:-1;  
+       }
+       .header-background{
+           position:fixed;
+           height: 25%;
+           width: 100%;
+           background: white;
+           z-index: -2;
        }
 
        /*first thing people see, better make it pretty*/
@@ -39,37 +51,78 @@
         img{
             border: 5px solid rgba(6, 50, 11, 0.817);
             border-radius: 30%;
-            height: 70%;
+            height: 65%;
             margin: 5%;
             align-self: center;
         }
         .navbar{
-            height: 30px;
+            height: 4%;
             width: 100%;
             border: 1px solid rgba(6, 50, 11, 0.817);
             display:flex;
             align-items: center;
             justify-content: space-around;
+            z-index: 1;
             
         }
         #nb1{
-            background-color: #166208a5
+            background-color: #166208;
+            position: absolute;
+            top: 45%;
         }
         #nb2{
-            background-color: #504ab8b6;
+            background-color: #504ab8;
+            position: absolute;
+            top: 88%;
         }
         #nb3{
-            background-color: #166208a5
+            background-color: #166208;
+            position: absolute;
+            top: 92%;
         }
         #nb4{
-            background-color: #504ab8b6;
+            background-color: #504ab8;
+            position: absolute;
+            top:96%;
+        }
+        #nb1 a{
+            border: 2px solid #504ab8b6;
+            border-radius: 4px;
+        }
+        #nb2 a{
+            border: 2px solid #166208a5;
+            border-radius: 4px;
+        }
+        #nb3 a{
+            border: 2px solid #504ab8b6;
+            border-radius: 4px;
+        }
+        #nb4 a{
+            border: 2px solid #166208a5;
+            border-radius: 4px;
         }
         div a{
             color:black;
             font-family: 'Cuprum', sans-serif; 
             font-weight:1000;
-            padding: 15px;
             text-decoration: none;
+            padding: 2px;
+        }
+        .block-text{
+            position:absolute;
+            top:25%;
+            height: 20%;
+            border: 2px solid black;
+            background: linear-gradient(to right, #166208b6, #504ab8a5);
+            text-align: center;
+            font-weight: 900;
+            font-size:25px;
+            font-style: italic;
+            z-index:-3;
+        }
+        .sticky{
+            position:fixed;
+            top: 25%;
         }
     </style>
 
@@ -86,6 +139,15 @@
         
         <img src="https://static.scientificamerican.com/sciam/cache/file/44DAA5B1-8418-4D55-BCA2359C8C87915E_source.jpg">
         
+    </div>
+    <div class = header-background>
+
+    </div>
+    <div class = "block-text">
+        Hello, and thank you for visiting Mobius Designs! Our goal at Mobius Designs 
+        is to implement your vision in way that no one has ever expected or wanted.
+        Our back-end to front-end responsive adaptive cutting edge application algorithmic 
+        deployment showcases a wirey framework useful for almost no situations.
     </div>
     <div class = "navbar" id="nb1">
         <a href = "first">first</a>
@@ -107,9 +169,7 @@
         <a href = "second">second</a>
         <a href = "third">third</a>
     </div>
-    <h2>
-        
-    </h2>
+    <div class = "placeholder">  </div>
 </body>
 
 </html>
